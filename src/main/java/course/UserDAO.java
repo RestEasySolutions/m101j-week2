@@ -48,6 +48,7 @@ public class UserDAO {
 		//        { "_id" : "erlichson", "password" : "VH9IFu+/vUNSKTzZsFZEOsK1,-1924261330" }
 		Document newUser = new Document("_id", username).append("password", passwordHash);
 
+		// email is not defined in the schema properly yet
 		if (email != null && !email.equals("")) {
 			newUser.append("email", email);
 		}
